@@ -6,14 +6,6 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true },
   // Preview runs next dev behind its own domain (set by the server); comma separated
   allowedDevOrigins: process.env.ALLOWED_DEV_ORIGINS?.split(",") ?? [],
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
-  },
 };
 
 export default nextConfig;

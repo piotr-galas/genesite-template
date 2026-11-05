@@ -1,3 +1,4 @@
+import { ConsentSettingsLink } from "@/components/consent/ConsentSettingsLink";
 import { site } from "@/site.config";
 
 export function Footer() {
@@ -10,6 +11,7 @@ export function Footer() {
         {(postalCode || city) && <p>{[postalCode, city].filter(Boolean).join(" ")}</p>}
         {site.phone && <a href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a>}
         {site.email && <a href={`mailto:${site.email}`}>{site.email}</a>}
+        <ConsentSettingsLink />
         <p className="mt-4 opacity-60">© {new Date().getFullYear()} {site.name}</p>
       </div>
     </footer>

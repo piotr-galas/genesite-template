@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Consent } from "@/components/consent/Consent";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { site } from "@/site.config";
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main className="flex flex-1 flex-col">{children}</main>
         <Footer />
+        <Consent />
       </body>
     </html>
   );

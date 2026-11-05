@@ -19,6 +19,15 @@ export const site = {
   },
   // The main menu, in order; every page is app/<path>/page.tsx
   navigation: [{ href: "/", label: "Strona główna" }],
+  // The cookie banner. AGENT: ask the client which they prefer before changing it:
+  // "simple": one bar, accept or reject everything; "detailed": analytics and marketing chosen separately.
+  // (A Cookiebot option will come later.) Without any tracking below there is no banner at all.
+  consent: "simple" as "simple" | "detailed",
+  // Tracking, any combination; empty = not used. Nothing loads before the visitor agrees:
+  // GTM and GA4 need the analytics consent, Google Ads and the Meta Pixel the marketing one.
+  // gtmId: "GTM-XXXXXXX" (its tags get Google's consent signals); ga4Id: "G-XXXXXXXXXX";
+  // googleAdsId: "AW-XXXXXXXXX"; metaPixelId: the Pixel's number
+  tracking: { gtmId: "", ga4Id: "", googleAdsId: "", metaPixelId: "" },
   // Full profile addresses, e.g. facebook: "https://www.facebook.com/kowalski"
   social: {} as Partial<Record<"facebook" | "instagram" | "linkedin" | "youtube" | "tiktok", string>>,
 };

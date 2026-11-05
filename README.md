@@ -19,3 +19,6 @@ The company's details (name, phone, address…) live in `site.config.ts`. `NEXT_
 - `app/not-found.tsx`: the 404 page (`out/404.html`).
 - `app/layout.tsx`: what every page shares (header, footer, metadata).
 - `components/`: parts used on more than one page (`Header`, `Footer`…).
+- `components/consent/`: the cookie banner (`simple` or `detailed`, chosen in `site.config.ts`) and the tracking
+  it guards (Google Tag Manager, GA4, Google Ads, Meta Pixel). Nothing loads before the visitor agrees; without any
+  tracking id there is no banner.

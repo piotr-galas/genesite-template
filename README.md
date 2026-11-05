@@ -12,7 +12,8 @@ The company's details (name, phone, address…) live in `site.config.ts`. `NEXT_
 
 ## Structure
 
-- `site.config.ts`: the company's details and the main menu.
+- `site.config.ts`: the company's details, the main menu and `trailingSlash`, which must match the client's
+  current addresses (`/kontakt/` on WordPress, `/kontakt` elsewhere): set it when the copy is made.
 - `app/<path>/page.tsx`: one folder per page, e.g. `app/kontakt/page.tsx` is `/kontakt`. Each sets its own title,
   description and sharing details with `pageMetadata()` from `lib/metadata.ts`.
 - `app/not-found.tsx`: the 404 page (`out/404.html`).

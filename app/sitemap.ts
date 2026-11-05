@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+import { pagePath } from "@/lib/metadata";
+import { site } from "@/site.config";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [{ url: `${siteUrl}/` }];
+  return [{ url: `${site.url}${pagePath("/")}` }];
 }

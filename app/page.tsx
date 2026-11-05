@@ -1,7 +1,11 @@
+import { pageMetadata } from "@/lib/metadata";
+
+export const metadata = pageMetadata({ title: "Strona w przygotowaniu", path: "/" });
+
 export default function Home() {
   return (
-    <main className="flex flex-1 items-center justify-center">
-      <h1 className="text-2xl font-semibold">Szablon genesite.pl</h1>
-    </main>
+    <section className="flex flex-1 items-center justify-center">
+      <h1 className="text-2xl font-semibold">Strona w przygotowaniu</h1>
+    </section>
   );
 }

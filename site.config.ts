@@ -12,6 +12,8 @@ export const site = {
     postalCode: "",
     city: "",
   },
+  // The main menu, in order; every page is app/<path>/page.tsx
+  navigation: [{ href: "/", label: "Strona główna" }],
   // Full profile addresses, e.g. facebook: "https://www.facebook.com/kowalski"
   social: {} as Partial<Record<"facebook" | "instagram" | "linkedin" | "youtube" | "tiktok", string>>,
 };

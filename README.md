@@ -8,4 +8,4 @@ npm run dev    # http://localhost:3000
 npm run build  # static files in out/
 ```
 
-`NEXT_PUBLIC_SITE_URL` is the site's address, used in metadata, `robots.txt` and `sitemap.xml`.
+The company's details (name, phone, address…) live in `site.config.ts`. `NEXT_PUBLIC_SITE_URL` is the site's address.

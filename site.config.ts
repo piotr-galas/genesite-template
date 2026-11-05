@@ -5,6 +5,8 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   name: "",
   description: "",
+  // The picture shown when a page is shared (Facebook, LinkedIn, messengers), e.g. "/og.jpg" in public/; 1200×630
+  ogImage: "",
   phone: "",
   email: "",
   address: {

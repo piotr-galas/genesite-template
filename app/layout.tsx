@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: site.name || "Strona w przygotowaniu",
+  // Each page sets its own title, description and sharing details (lib/metadata.ts)
   description: site.description || undefined,
 };
 

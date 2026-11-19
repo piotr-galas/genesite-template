@@ -18,7 +18,9 @@ The company's details (name, phone, address…) live in `site.config.ts`. `NEXT_
   description and sharing details with `pageMetadata()` from `lib/metadata.ts`.
 - `app/not-found.tsx`: the 404 page (`out/404.html`).
 - `app/layout.tsx`: what every page shares (header, footer, metadata).
-- `components/`: parts used on more than one page (`Header`, `Footer`…).
+- `components/`: parts used on more than one page (`Header`, `Footer`…). `Header` has the phone menu (a button
+  that turns into a cross, Escape closes it); a copy restyles it to the client's look. `StructuredData` gives
+  Google the business (schema.org `businessType`) from `site.config.ts`, on every page.
 - `components/consent/`: the cookie banner (`simple` or `detailed`, chosen in `site.config.ts`) and the tracking
   it guards (Google Tag Manager, GA4, Google Ads, Meta Pixel). Nothing loads before the visitor agrees; without any
   tracking id there is no banner.

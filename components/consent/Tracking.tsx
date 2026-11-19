@@ -40,8 +40,9 @@ export function Tracking() {
       {gtagId && (
         <>
           <Script src={`https://www.googletagmanager.com/gtag/js?id=${gtagId}`} strategy="afterInteractive" />
-          <Script id="gtag" strategy="afterInteractive">
-            {`gtag('js',new Date());${ga4 ? `gtag('config','${ga4Id}');` : ""}${ads ? `gtag('config','${googleAdsId}');` : ""}`}
+          {/* Not id="gtag": an element with that id becomes window.gtag and hides the function */}
+          <Script id="gtag-init" strategy="afterInteractive">
+            {`window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments)};gtag('js',new Date());${ga4 ? `gtag('config','${ga4Id}');` : ""}${ads ? `gtag('config','${googleAdsId}');` : ""}`}
           </Script>
         </>
       )}

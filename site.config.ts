@@ -8,6 +8,9 @@ export const site = {
   trailingSlash: false,
   name: "",
   description: "",
+  // The business's type for Google, the closest from schema.org: e.g. "AutoRepair", "Dentist", "VeterinaryCare",
+  // "Store"; "LocalBusiness" when none fits
+  businessType: "LocalBusiness",
   // The picture shown when a page is shared (Facebook, LinkedIn, messengers), e.g. "/og.jpg" in public/; 1200×630
   ogImage: "",
   phone: "",
@@ -17,6 +20,8 @@ export const site = {
     postalCode: "",
     city: "",
   },
+  // Opening hours for Google, in schema.org's form, e.g. ["Mo-Fr 08:00-17:00", "Sa 09:00-13:00"]; empty = not given
+  openingHours: [] as string[],
   // The main menu, in order; every page is app/<path>/page.tsx
   navigation: [{ href: "/", label: "Strona główna" }],
   // The cookie banner. AGENT: ask the client which they prefer before changing it:

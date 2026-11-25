@@ -24,12 +24,12 @@ export function Header() {
   return (
     <header className="border-b">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-4">
-        <Link href="/" className="font-semibold">
+        <Link prefetch={false} href="/" className="font-semibold">
           {site.name}
         </Link>
         <nav className="hidden gap-6 md:flex">
           {site.navigation.map((item) => (
-            <Link key={item.href} href={item.href}>
+            <Link prefetch={false} key={item.href} href={item.href}>
               {item.label}
             </Link>
           ))}
@@ -56,7 +56,7 @@ export function Header() {
       {open && (
         <nav id="menu-phone" className="border-t px-4 pb-2 md:hidden">
           {site.navigation.map((item) => (
-            <Link key={item.href} href={item.href} className="block py-3" onClick={() => setOpen(false)}>
+            <Link prefetch={false} key={item.href} href={item.href} className="block py-3" onClick={() => setOpen(false)}>
               {item.label}
             </Link>
           ))}

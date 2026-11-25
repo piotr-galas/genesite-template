@@ -18,6 +18,9 @@ The company's details (name, phone, address…) live in `site.config.ts`. `NEXT_
   description and sharing details with `pageMetadata()` from `lib/metadata.ts`.
 - `app/not-found.tsx`: the 404 page (`out/404.html`).
 - `app/layout.tsx`: what every page shares (header, footer, metadata).
+- Links between pages: `<Link prefetch={false}>`, every one. By default Next.js fetches every linked page ahead,
+  with its images, as soon as the link shows: a phone visitor of one page downloads the menu's pages too
+  (buczakauto.pl: 1 MB of the home page's slider on every page).
 - `components/`: parts used on more than one page (`Header`, `Footer`…). `Header` has the phone menu (a button
   that turns into a cross, Escape closes it); a copy restyles it to the client's look. `StructuredData` gives
   Google the business (schema.org `businessType`) from `site.config.ts`, on every page.

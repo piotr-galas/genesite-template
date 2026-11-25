@@ -34,7 +34,7 @@ export function ConsentDetailed() {
         <h2 className="text-lg font-semibold">Pliki cookies</h2>
         <p className="mt-2 text-sm">
           Używamy plików cookies, żeby strona działała, oraz, za Twoją zgodą, do analizy ruchu i dopasowania reklam.{" "}
-          <Link href="/polityka-prywatnosci" className="underline">
+          <Link prefetch={false} href="/polityka-prywatnosci" className="underline">
             Polityka prywatności
           </Link>
         </p>

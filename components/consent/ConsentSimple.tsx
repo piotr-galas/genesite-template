@@ -18,7 +18,7 @@ export function ConsentSimple() {
       <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <p className="text-sm">
           Używamy plików cookies do analizy ruchu i dopasowania reklam.{" "}
-          <Link href="/polityka-prywatnosci" className="underline">
+          <Link prefetch={false} href="/polityka-prywatnosci" className="underline">
             Polityka prywatności
           </Link>
         </p>

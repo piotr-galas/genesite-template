@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Consent } from "@/components/consent/Consent";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { StructuredData } from "@/components/StructuredData";
 import { site } from "@/site.config";
 import "./globals.css";
@@ -17,9 +15,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="pl" className="h-full antialiased">
       <body className="min-h-full flex flex-col">
         <StructuredData />
-        <Header />
-        <main className="flex flex-1 flex-col">{children}</main>
-        <Footer />
+        {/* Each proposal has its own header and footer (components/proposals/) */}
+        {children}
         <Consent />
       </body>
     </html>

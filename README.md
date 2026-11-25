@@ -1,5 +1,18 @@
 # Client site
 
+**This is the branch `proposals`**: not a client's site but the page we show the client before the meeting,
+their home page in three layouts and our bar on top to switch between them. It is never merged into `master`;
+rebase it on `master` to bring the template's changes. After the meeting the page is deleted or left as it is.
+
+- `app/page.tsx`: the proposals in order, each with its letter and a few words on what it is going for (the
+  bar shows them).
+- `components/proposals/Proposal<letter>.tsx`: one proposal, the whole home page with its own header and footer
+  (the layout has none on this branch). A sticky header goes under our bar: `top-[var(--proposals-bar)]`.
+- `components/proposals/Proposals.tsx`: our bar. It works on phones too; `#b` in the address opens proposal B.
+- Only the home page exists: a menu's link to another page leads to `app/not-found.tsx`, which says so and leads
+  back. The page is kept out of Google (`robots.ts`, noindex, no sitemap).
+
+
 Made from the genesite template: Next.js with a static export (`out/`), Tailwind CSS.
 
 ```bash

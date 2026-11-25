@@ -4,6 +4,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* The height of our proposals' bar (components/proposals/Proposals.tsx) */
+  --proposals-bar: 3.25rem;
 }
 
 @theme inline {
